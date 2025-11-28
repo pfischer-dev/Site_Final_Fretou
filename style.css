@@ -1,0 +1,985 @@
+/* ==========================
+   RESET & BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #ff9800;
+  --orange-light: #ffb300;
+  --blue-dark: #475c71;
+  --blue-overlay: rgba(29, 60, 106, 0.55);
+  --gray-dark: #222;
+  --gray-medium: #333;
+  --gray-light: #666;
+  --white: #fff;
+  --yellow-freto: #f4a018;
+  --yellow-light: #ffe7ba;
+  --background-light: #f8f8f8;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--white);
+  color: var(--gray-dark);
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   HEADER FIXO
+========================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  background: transparent;
+  z-index: 999;
+  transition: background-color 0.4s ease, padding 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: #475c71;
+  padding: 12px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img, .logo-run {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.brand-text strong {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.brand-text small {
+  display: block;
+  margin-top: -3px;
+  font-size: 12px;
+  color: #dce3ea;
+}
+
+.menu-topo a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity .3s ease;
+}
+
+.menu-topo a:hover {
+  opacity: .7;
+}
+
+.header-login {
+  border: 2px solid var(--white);
+  padding: 8px 32px;
+  border-radius: 35px;
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-login:hover {
+  background-color: var(--white);
+  color: #475c71;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://freto.com.br/wp-content/uploads/2025/08/transportadora-carga-pesada.gif") center/cover no-repeat fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+  text-align: left;
+}
+
+.hero-left h1 {
+  font-size: 3.4rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--white);
+  max-width: 680px;
+}
+
+.hero-left p {
+  margin-top: 18px;
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.btn-yellow {
+  display: inline-block;
+  margin-top: 28px;
+  background: var(--orange-light);
+  padding: 16px 34px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn-yellow:hover {
+  background: #ffca3a;
+}
+
+.hero-rating {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-rating img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.rating-text {
+  margin-left: 10px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ==========================
+   SEÇÃO DIGITAL AO RAIZ
+========================== */
+.section-digital-raiz {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.digital-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.digital-left, .digital-right {
+  width: 50%;
+}
+
+.hexagon-bg {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--orange);
+  position: absolute;
+  left: -40px;
+  top: 50px;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+}
+
+.phone-card {
+  background: #5f748a;
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-card img {
+  width: 270px;
+  border-radius: 10px;
+}
+
+.digital-right h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight { color: var(--orange); }
+.highlight2 { color: var(--blue-dark); }
+
+.digital-right p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: var(--white);
+  padding: 22px 28px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box strong {
+  font-size: 1.3rem;
+  color: var(--blue-dark);
+}
+
+.stat-box span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--yellow-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle img {
+  width: 24px;
+}
+
+.btn-app {
+  display: inline-block;
+  padding: 16px 38px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #8ca4be, #647f9d);
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn-app:hover {
+  opacity: .85;
+}
+
+/* ==========================
+   SEÇÃO EMBARCADOR
+========================== */
+.section-embarcador {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url("img/imgAreaEmbarcador.gif") center/cover no-repeat;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.embarcador-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 650px;
+  padding: 20px;
+  
+}
+
+.embarcador-content h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.embarcador-content p {
+  color: var(--white);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.btn-embarcador {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn-embarcador:hover {
+  background: var(--white);
+  color: #333;
+}
+
+/* ==========================
+   SEÇÃO CUIDA
+========================== */
+.section-cuida {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.cuida-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.cuida-left, .cuida-right { width: 50%; }
+
+.cuida-left img { width: 100%; max-width: 540px; }
+
+.cuida-right h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: var(--blue-dark);
+}
+
+.fretou-highlight { color: var(--orange); }
+
+.cuida-list {
+  margin-bottom: 35px;
+}
+
+.cuida-list h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 12px;
+}
+
+.cuida-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cuida-list li {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 22px;
+}
+
+.cuida-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ==========================
+   SEÇÃO NOSSO ALCANCE
+========================== */
+.section-alcance {
+  position: relative;
+  width: 100%;
+  padding: 140px 0;
+  background: url("https://freto.com.br/wp-content/uploads/2024/05/Rectangle-34624115-1.png") center/cover no-repeat;
+}
+
+.alcance-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--blue-overlay);
+  z-index: 1;
+}
+
+.alcance-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.alcance-left {
+  width: 55%;
+  color: var(--white);
+}
+
+.alcance-left h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.alcance-left p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.alcance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.alcance-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--white);
+}
+
+.alcance-box img { width: 32px; opacity: 0.85; }
+.alcance-box strong { font-size: 1.1rem; font-weight: 600; }
+
+.btn-alcance {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--orange-light);
+  padding: 16px 40px;
+  border-radius: 50px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.btn-alcance:hover { background: #ffca3a; }
+
+.alcance-right { width: 45%; display: flex; justify-content: center; }
+.alcance-right img { width: 100%; max-width: 550px; }
+
+/* ==========================
+   SEÇÃO TEM CARGA
+========================== */
+.section-cargas {
+  padding: 120px 0;
+  background: var(--background-light);
+  text-align: center;
+}
+
+.section-cargas h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--blue-dark);
+}
+
+.carga-highlight { color: var(--orange); }
+.fretou-highlight { color: var(--orange); font-weight: 800; }
+
+.cargas-subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 780px;
+  margin: 0 auto 50px auto;
+}
+
+.cargas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  justify-items: center;
+}
+
+.carga-box {
+  width: 100%;
+  max-width: 260px;
+  background: var(--white);
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px 25px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: .2s;
+  cursor: default;
+}
+
+.carga-box::before {
+  content: "✔";
+  background: var(--yellow-light);
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carga-box span {
+  font-weight: 600;
+  color: var(--blue-dark);
+  font-size: 1rem;
+}
+
+.carga-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   SOBRE, HISTÓRIA, FALE CONOSCO
+========================== */
+.sobre-freto-nova { padding: 80px 0; background: var(--white); }
+
+.container-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.texto-sobre h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a2d40;
+  line-height: 1.2;
+}
+
+.texto-sobre h2 span { color: var(--orange-light); }
+
+.texto-sobre p {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #434343;
+  line-height: 1.6;
+}
+
+.btn-sobre {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--orange-light);
+  color: var(--white);
+  font-size: 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.btn-sobre:hover { background: #ffb733; }
+
+.imagem-sobre img {
+  width: 500px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.imagem-mapas-api img {
+  width: 450px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nossa-historia-container {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.titulo-historia {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.titulo-historia span { color: var(--yellow-freto); }
+
+.secao-fale-conosco {
+  width: 100%;
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+
+.fale-conosco-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.fale-img img{
+  width: 450px;
+}
+.fale-form h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.fale-form h2 span { color: var(--yellow-freto); }
+
+.fale-form form { width: 100%; }
+
+.fale-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.fale-form input,
+.fale-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background: var(--white);
+}
+
+.fale-form textarea { height: 140px; resize: none; }
+
+.linha-dupla { display: flex; gap: 20px; }
+.campo { width: 100%; }
+
+.btn-enviar {
+  display: inline-block;
+  padding: 16px 38px;
+  border-radius: 50px;
+  background: var(--orange-light);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: .3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-enviar:hover { background: #ffca3a; color: #000; }
+
+
+/* ==========================
+   RODAPÉ
+========================== */
+.novo-rodape {
+    background: #475c71;
+    color: #ffffff;
+    padding: 60px 5%;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.rodape-col h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    
+}
+
+.rodape-col ul {
+    list-style: none;
+    padding: 0;
+  
+}
+
+.rodape-col ul li {
+    margin: 6px 0;
+    
+}
+
+.rodape-col ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rodape-col ul li a:hover {
+    color: #ffcc00;
+}
+
+.rodape-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.rodape-redes img {
+    width: 32px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.rodape-redes img:hover {
+    transform: scale(1.1);
+}
+
+.google-play-btn img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+.rodape-copy {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    color: #cccccc;
+}
+
+/* ==========================
+   VALIDAÇAO DE FORMULARIO (JS)
+========================== */
+.input-error {
+  border: 1px solid red !important;
+  background: #ffecec;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+}
+
+
+/* ==========================
+   SUCESSO FORM ANIMAÇÃO
+========================== */
+.msg-sucesso {
+  background: #4caf50;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+  animation: fadeInDown .6s ease forwards;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.msg-sucesso.hide {
+  animation: fadeOutUp .6s ease forwards;
+}
+
+@keyframes fadeOutUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* ==========================
+   BOTÃO VOLTAR AO TOPO
+========================== */
+#btn-topo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 42px;
+  height: 42px;
+  background: #475c71;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+#btn-topo:hover {
+  background: #3b4d60;
+}
+
+#btn-topo.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================
+   EQUIPES
+========================== */
+.secao-equipe {
+  padding: 100px 0;
+  background: #eef6ff;
+  text-align: center;
+}
+
+.titulo-equipe {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 50px;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.equipe-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.equipe-card-fretou {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+ 
+ 
+
+.equipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.equipe-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid var(--blue-dark);
+}
+
+.equipe-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 4px;
+}
+
+.equipe-card p {
+  font-size: 0.85rem;
+  color: var(--gray-light);
+}
+
+
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+
+@media (max-width: 1024px) {
+  .digital-wrapper, .cuida-wrapper, .alcance-wrapper, .container-sobre, .fale-conosco-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .digital-left, .digital-right,
+  .cuida-left, .cuida-right,
+  .alcance-left, .alcance-right,
+  .imagem-sobre, .texto-sobre {
+    width: 100%;
+  }
+
+  .cargas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .alcance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-left h1 { font-size: 2.6rem; }
+  .hero-left p { font-size: 1rem; }
+  .section-digital-raiz, .section-cuida, .section-cargas { padding: 80px 20px; }
+  .section-alcance { padding: 100px 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 { font-size: 2rem; }
+  .hero-left p { font-size: 0.95rem; }
+  .cargas-grid { grid-template-columns: 1fr; }
+}
+
+
+
+

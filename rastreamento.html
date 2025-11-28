@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreamento Fretou</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  />
+
+  <!-- Estilo da página -->
+  <link rel="stylesheet" href="rastreamento.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header-rastreio">
+    <div class="rast-logo">
+      <img src="img/caminhãologo.svg" alt="Logo Caminhão">
+      <span>Fretou - Rastreamento</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <section class="rastreamento-dashboard">
+
+    <!-- PAINEL LATERAL -->
+    <aside class="painel-carga">
+
+      <h1>Rastreie sua carga</h1>
+      <p class="subtitulo">Digite o código para visualizar o trajeto em tempo real.</p>
+
+      <div class="campo-codigo">
+        <label for="codigoCarga">Código da carga:</label>
+        <input id="codigoCarga" type="text" placeholder="Ex: FRT-98765">
+      </div>
+
+      <button class="btn-rastrear" id="btnRastrear">Rastrear carga</button>
+
+      <!-- INFORMAÇÕES DA CARGA -->
+      <div class="info-box">
+        <strong>Tipo:</strong> Minério de ferro<br>
+        <strong>Peso:</strong> 28 toneladas<br>
+        <strong>Origem:</strong> Santos - SP<br>
+        <strong>Destino:</strong> Belo Horizonte - MG<br>
+        <strong>Status:</strong> <span class="status em-transito">Em trânsito</span><br><br>
+
+        <strong>Distância:</strong> <span id="distancia">--</span><br>
+        <strong>Tempo estimado:</strong> <span id="tempoEstimado">--</span><br>
+      </div>
+
+    </aside>
+
+    <!-- ÁREA DO MAPA -->
+    <section class="area-mapa">
+      <div id="mapa"></div>
+    </section>
+
+  </section>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+  </script>
+
+  <!-- Script principal -->
+  <script src="rastreamento.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Configurações essenciais do documento -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- SEO básico -->
+  <title>Fretou - Transporte de Cargas</title>
+  <meta name="description" content="Fretou — transportadora digital que conecta caminhoneiros e embarcadores com segurança, tecnologia e eficiência.">
+
+  <!-- Favicon (substituir IMG/favicon.png pelo seu) -->
+  <link rel="icon" href="img/CAIXA.png">
+
+  <!-- Arquivo de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonte Inter utilizada no projeto -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- =============================================================
+      HEADER (Logotipo + Navegação + Login)
+      ============================================================= -->
+  <header class="header" id="header" role="banner">
+    <div class="header-inner container">
+
+      <!-- Logotipo e Nome -->
+      <div class="brand">
+        <img src="img/caminhãologo.svg"
+             class="logo-run"
+             alt="Logotipo Fretou"
+             loading="lazy"
+             decoding="async">
+        <div class="brand-text">
+          <strong>Fretou</strong>
+          <small>Transporte de Cargas</small>
+        </div>
+      </div>
+
+      <!-- Navegação do topo -->
+      <nav class="menu-topo" aria-label="Menu principal">
+        <!-- Links âncora para seções da página (IDs alinhados abaixo) -->
+        <a href="#beneficios">Benefícios</a>
+        <a href="#alcance">Nosso Alcance</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <!-- Ação Login -->
+      <a href="/login" class="header-login" role="button" aria-label="Acessar login">Login</a>
+    </div>
+  </header>
+
+  <!-- =============================================================
+      HERO - Seção inicial 
+      ============================================================= -->
+  <main id="main-content" role="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner container">
+
+        <!-- Lado Esquerdo com título, texto e ação -->
+        <div class="hero-left">
+          <h1 id="hero-heading">Onde os melhores <br> Caminhoneiros (as) e as <br> melhores cargas se encontram</h1>
+
+          <p>
+            Facilitamos seu dia a dia na Estrada, explorando novas rotas com cargas mais lucrativas,
+            de qualidade e com segurança. Seu negócio na palma da mão!
+          </p>
+
+          <!-- CTA principal -->
+          <a href="#contato" class="btn-yellow" role="button" aria-label="Baixar aplicativo">Baixe nosso aplicativo</a>
+
+          <!-- Indicadores de aprovação dos Motoristas -->
+          <div class="hero-rating" aria-hidden="false">
+            <img src="img/Foto de caminhoneiro 1.jpg" alt="Foto de caminhoneiro 1" loading="lazy" decoding="async">
+            <img src="img/Foto de caminhoneiro 2.jpg" alt="Foto de caminhoneiro 2" loading="lazy" decoding="async">
+            <img src="img/Foto de caminhoneiro 3.jpg" alt="Foto de caminhoneiro 3" loading="lazy" decoding="async">
+            <span class="rating-text">+4,5 ★ Caminhoneiros satisfeitos!</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - Unimos o Digital ao Raiz
+        ============================================================= -->
+    <section class="section-digital-raiz" aria-labelledby="digital-heading">
+      <div class="container digital-wrapper">
+
+        <!-- Imagem com efeitos visuais -->
+        <div class="digital-left">
+          <img src="img/Group-427321028.svg"
+               alt="Hexágono Fretou"
+               class="hexagon-svg"
+               loading="lazy"
+               decoding="async">
+        </div>
+
+        <!-- Textos + Estatísticas Visuais -->
+        <div class="digital-right">
+          <h2 id="digital-heading">
+            Unimos o <span class="highlight">Digital</span> ao <span class="highlight2">Raiz</span>
+          </h2>
+
+          <p>
+            O Fretou é uma transportadora digital, que presta serviço de transporte rodoviário de cargas baseado em tecnologia e gestão de frotas. Somos um time composto por pessoas com forte know-how em logística e com tecnologia aplicada.
+          </p>
+
+          <!-- Informações rápidas (ratings e etc.) -->
+          <div class="stats" role="list">
+            <div class="stat-box" role="listitem">
+              <div class="icon-circle">
+                <img src="img/Caminhoneiros satisfeitos.png" alt="Ícone avaliação" loading="lazy" decoding="async">
+              </div>
+              <div>
+                <strong>+4,5 ⭐</strong>
+                <span>Caminhoneiros satisfeitos</span>
+              </div>
+            </div>
+
+            <div class="stat-box" role="listitem">
+              <div class="icon-circle">
+                <img src="img/EstrelaAvaliações.png" alt="Ícone avaliações" loading="lazy" decoding="async">
+              </div>
+              <div>
+                <strong>+11,5K</strong>
+                <span>Avaliações</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA da seção -->
+          <a href="#contato" class="btn-app" role="button" aria-label="Baixar aplicativo">Baixe nosso aplicativo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - Embarcador
+        ============================================================= -->
+    <section class="section-embarcador" aria-labelledby="embarcador-heading">
+
+      <div class="embarcador-content">
+        <h2 id="embarcador-heading">Embarcador</h2>
+        <p>
+          Descubra uma nova maneira de fazer negócios na Estrada. Com o Fretou você otimiza o transporte de suas cargas de forma eficaz, aumentando a produtividade da sua operação.
+        </p>
+
+        <a href="#contato" class="btn-embarcador" role="button" aria-label="Quero saber mais sobre embarcador">Quero saber mais</a>
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - O Fretou cuida de tudo pra você 
+        ============================================================= -->
+    <section class="section-cuida" id="beneficios" aria-labelledby="cuida-heading">
+      <div class="container cuida-wrapper">
+
+        <!-- Imagem demonstrativa -->
+        <div class="cuida-left">
+          <img src="img/beneficios.png"
+               alt="Processo do Fretou ilustrado"
+               loading="lazy"
+               decoding="async">
+        </div>
+
+        <!-- Listas de benefícios -->
+        <div class="cuida-right">
+
+          <h2 id="cuida-heading">o <span class="fretou-highlight">Fretou</span> cuida de tudo pra você</h2>
+
+          <!-- Listas de serviços oferecidos -->
+          <div class="cuida-list" aria-labelledby="servicos-heading">
+            <h3 id="servicos-heading">🏆 Nível de serviço com excelência</h3>
+            <ul>
+              <li>Agendamento do motorista conforme agenda do cliente</li>
+              <li>Liberação do veículo em 1h</li>
+              <li>99,4% efetividade de entrega</li>
+              <li>Suporte e atendimento (24/7)</li>
+              <li>Indicadores de Performance (BI)</li>
+            </ul>
+          </div>
+
+          <div class="cuida-list">
+            <h3>🛡️ Segurança e Compliance</h3>
+            <ul>
+              <li>Motoristas e veículos 100% homologados</li>
+              <li>Cumprimos as regras do PGR</li>
+              <li>Monitoramento da carga</li>
+            </ul>
+          </div>
+
+          <div class="cuida-list">
+            <h3>💰 Redução da conta frete</h3>
+            <ul>
+              <li>Operações mais competitivas</li>
+              <li>Inteligência de rotas</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - Nosso Alcance (Resultados da Operação)
+        ============================================================= -->
+    <section class="section-alcance" id="alcance" aria-labelledby="alcance-heading">
+      <div class="alcance-overlay" aria-hidden="true"></div>
+
+      <div class="container alcance-wrapper">
+        <div class="alcance-left">
+          <h2 id="alcance-heading">Nosso alcance</h2>
+
+          <p>
+            Há 6 anos, nós mudamos a forma de usar a Estrada para fazer negócios, tornando a logística integrada mais acessível para Empresas e Caminhoneiros de todo o país.
+          </p>
+
+          <!-- Números da empresa -->
+          <div class="alcance-grid" role="list">
+            <div class="alcance-box" role="listitem">
+              <img src="img/CAIXA.png" alt="Ícone cargas" loading="lazy" decoding="async">
+              <strong>+2,5 milhões de cargas contratadas</strong>
+            </div>
+
+            <div class="alcance-box" role="listitem">
+              <img src="img/TRUCK.png" alt="Ícone caminhão" loading="lazy" decoding="async">
+              <strong>+R$ 13 bilhões em fretes transportados</strong>
+            </div>
+
+            <div class="alcance-box" role="listitem">
+              <img src="img/toneladas.png" alt="Ícone tonelagem" loading="lazy" decoding="async">
+              <strong>+100 milhões de toneladas transportadas</strong>
+            </div>
+
+            <div class="alcance-box" role="listitem">
+              <img src="img/mapinha.png" alt="Ícone quilômetros" loading="lazy" decoding="async">
+              <strong>+1 bilhão de quilômetros rodados</strong>
+            </div>
+          </div>
+
+          <!-- Botão de ação -->
+          <a href="#contato" class="btn-alcance" role="button" aria-label="Saiba mais sobre nosso alcance">Saiba mais</a>
+        </div>
+
+        <!-- Imagem ilustrativa (mapa / logística) -->
+        <div class="alcance-right">
+          <img src="img/mapa.svg"
+               alt="Ilustração mapa Fretou"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - Tipos de Cargas
+        ============================================================= -->
+    <section class="section-cargas" aria-labelledby="cargas-heading">
+      <div class="container cargas-wrapper">
+
+        <h2 id="cargas-heading">
+          Tem <span class="carga-highlight">carga?</span>
+          Conte com o <span class="fretou-highlight">Fretou!</span>
+        </h2>
+
+        <!-- Subtítulo da seção -->
+        <p class="cargas-subtitle">
+          Independentemente do tipo de carga que você precisa transportar, estamos aqui para atender às suas necessidades
+          logísticas com eficiência, segurança, compliance e redução da conta frete.
+          Nós levamos sua carga ao destino final, sem complicações.
+        </p>
+
+        <!-- Grade de categorias transportadas -->
+        <div class="cargas-grid" role="list">
+          <div class="carga-box" role="listitem"><span>Produtos Siderúrgicos</span></div>
+          <div class="carga-box" role="listitem"><span>Minério de ferro</span></div>
+          <div class="carga-box" role="listitem"><span>Sucata</span></div>
+          <div class="carga-box" role="listitem"><span>Sal Mineral</span></div>
+
+          <div class="carga-box" role="listitem"><span>Calcário</span></div>
+          <div class="carga-box" role="listitem"><span>Ferro</span></div>
+          <div class="carga-box" role="listitem"><span>Dolomita</span></div>
+          <div class="carga-box" role="listitem"><span>Fertilizante</span></div>
+
+          <div class="carga-box" role="listitem"><span>Pedra</span></div>
+          <div class="carga-box" role="listitem"><span>Ração animal</span></div>
+          <div class="carga-box" role="listitem"><span>Embalagem Papelão</span></div>
+          <div class="carga-box" role="listitem"><span>E muitos outros</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================
+        SEÇÃO - Sobre a Empresa + Linha do tempo
+        ============================================================= -->
+    <section class="sobre-freto-nova" id="sobre" aria-labelledby="sobre-heading">
+      <div class="container-sobre">
+
+        <!-- Conteúdo textual institucional -->
+        <div class="texto-sobre">
+          <h2 id="sobre-heading">
+            Nós somos a <span>Fretou</span>: Uma Logtech, que atua no mercado como uma Transportadora Digital.
+          </h2>
+
+          <p>
+            A Fretou nasceu, com foco no contexto de suprir as ineficiências da cadeia logística e gestão de frota. Em conversas com clientes, tivemos a oportunidade de mapear as dores e ineficiências em suas operações. Entre elas, de um lado, os embarcadores perdiam muito tempo para encontrar o transportador ideal e, do outro lado, tínhamos os caminhoneiros com dificuldades para rentabilizar seus ativos e encontrar cargas, rodando muitas vezes vazios.
+          </p>
+
+          <p>
+            Visando resolver este problema, iniciamos a busca por uma solução que pudesse ser comprada e aprimorada. Não encontramos então nenhuma empresa que tivesse tecnologia para atender a essas necessidades — e foi assim que construímos, do zero, uma tecnologia capaz de atuar onde quer que esteja a oferta e a demanda. Uma inovação que conecta o caminhoneiro diretamente com o embarcador, pautada pela digitalização e com o propósito de “Simplificar a logística rodoviária, movendo Caminhoneiros”.
+          </p>
+
+          <p>
+            Desde o início, nosso compromisso tem sido transcender os limites convencionais. Com o objetivo de revolucionar as estradas, aproveitamos os avanços tecnológicos para desempenhar um papel fundamental, tornando a logística mais acessível para Empresas e Caminhoneiros(as) em todo o país.
+          </p>
+
+          <a href="#contato" class="btn-sobre" role="button" aria-label="Quero ser Freto">Quero ser Fretou</a>
+        </div>
+
+        <!-- Imagem ilustrativa -->
+        <div class="imagem-sobre">
+          <img src="img/contratar-caminhoneiro.webp"
+               alt="Caminhão Fretou"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
+
+      
+        </div>
+      </div>
+    </section>
+
+
+  <!-- =============================================================
+     SEÇÃO - Equipe de Desenvolvimento
+================================================================ -->
+<section class="secao-equipe" id="equipe">
+  <div class="container equipe-wrapper">
+
+    <h2 class="titulo-equipe">Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-grid">
+      <!-- CARD - INTEGRANTE -->
+      <div class="equipe-card">
+        <img src="img/equipe1.png" alt="Foto Integrante">
+        <h3>Weverton</h3>
+        <p>Líder, Documentações e JavaScript</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe2.png" alt="Foto Integrante">
+        <h3>Jakeline</h3>
+        <p>HTML5 e Css3</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe3.png" alt="Foto Integrante">
+        <h3>Guilherme</h3>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe4.png" alt="Foto Integrante">
+        <h3>Paulo Fischer</h3>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe5.png" alt="Foto Integrante">
+        <h3>Gabriel</h3>
+        <p>HTML5</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe6.png" alt="Foto Integrante">
+        <h3>Djully</h3>
+        <p>HTML5</p>
+      </div>
+
+       <div class="equipe-card">
+        <img src="img/equipe7.png" alt="Foto Integrante">
+        <h3>Fabio</h3>
+        <p>HTML5 e Css3</p>
+      </div>
+
+      <div class="equipe-card">
+        <img src="img/equipe8.png" alt="Foto Integrante">
+        <h3>João</h3>
+        <p>IOT</p>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- =============================================================
+        SEÇÃO - Contato / Formulário
+        ============================================================= -->
+    <section class="secao-fale-conosco" id="contato" aria-labelledby="contato-heading">
+      <div class="fale-conosco-container">
+
+        <!-- Formulário -->
+        <div class="fale-form">
+          <h2 id="contato-heading">Fale <span>conosco</span></h2>
+
+          <form action="#" method="POST" novalidate>
+  <label for="nome">Nome</label>
+  <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+
+  <div class="linha-dupla">
+    <div class="campo">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required>
+    </div>
+
+    <div class="campo">
+      <label for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" type="tel" placeholder="Digite seu telefone" required>
+    </div>
+  </div>
+
+  <label for="empresa">Empresa</label>
+  <input id="empresa" name="empresa" type="text" placeholder="Digite o nome da empresa">
+
+  <label for="assunto">Assunto</label>
+  <textarea id="assunto" name="mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
+
+  <button type="submit" class="btn-enviar">Enviar</button>
+</form>
+
+<div id="msg-sucesso" class="msg-sucesso" style="display:none;">
+  Mensagem enviada com sucesso! 🚚💨
+</div>
+        </div>
+
+        <!-- Imagem ilustrativa do contato -->
+        <div class="fale-img">
+          <img src="img/img formulario.jpg"
+               alt="Imagem de contato Fretou"
+               loading="lazy"
+               decoding="async">
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+
+<!-- =============================================================
+      API SECTION
+    ============================================================= -->
+
+    <section class="sobre-api" id="sobre" aria-labelledby="sobre-heading">
+      <div class="container-sobre">
+
+        <!-- Imagem ilustrativa -->
+        <div class="imagem-mapas-api">
+          <img src="img/fretou_maps.png"
+               alt="Caminhão Fretou"
+               loading="lazy"
+               decoding="async">
+        </div>
+
+        <!-- Conteúdo API -->
+        <div class="texto-sobre">
+          <h2 id="sobre-heading">
+            Com a <span>Fretou</span> você tem acesso a Localização de sua carga em tempo real!!!
+          </h2>
+
+          <p>
+            Com a Fretou, você acompanha sua carga em tempo real com precisão e segurança.
+
+Nossa solução de rastreamento foi criada para otimizar a logística de empresas e caminhoneiros, oferecendo visibilidade completa do trajeto, desde a origem até o destino final.
+Com tecnologia avançada e foco em eficiência operacional, você monitora cada etapa da viagem, reduz riscos, ganha agilidade e toma decisões mais assertivas.
+
+A Fretou conecta embarcadores e transportadores de forma inteligente, garantindo entregas mais rápidas, econômicas e transparentes.
+          </p>
+
+
+          <a href="rastreamento.html" class="btn-sobre" role="button" aria-label="Teste nossa API">Teste nossa API</a>
+        </div>
+      </div>      
+        </div>
+      </div>
+    </section>
+
+  <!-- =============================================================
+      FOOTER (Rodapé)
+      ============================================================= -->
+  <footer class="novo-rodape" role="contentinfo">
+    <div class="rodape-container">
+
+      <!-- Coluna 1 - Marca + Redes Sociais + Download App -->
+      <div class="rodape-col">
+        <img src="img/caminhãologo.svg" alt="Logo Freto" class="rodape-logo" loading="lazy" decoding="async">
+
+        <div class="rodape-redes" aria-label="Redes sociais">
+          <a href="#" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook"></a>
+          <a href="#" rel="noopener" aria-label="Instagram"><img src="img/insta.svg" alt="Instagram"></a>
+          <a href="#" rel="noopener" aria-label="LinkedIn"><img src="img/Linkedin.svg" alt="LinkedIn"></a>
+        </div>
+
+      </div>
+
+      <!-- Coluna 2 - Menu -->
+      <div class="rodape-col">
+        <h3>Fretou</h3>
+        <ul>
+          <li><a href="#hero-heading">Início</a></li>
+          <li><a href="#historia-heading">Nossa História</a></li>
+          <li><a href="#digital-heading">Tecnologia</a></li>
+          <li><a href="#beneficios">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3 - Dados de Atendimento -->
+      <div class="rodape-col">
+        <h3>Atendimento</h3>
+        <p>Email: <a>atendimento@fretou.com.br</a></p>
+        <p>Telefone: <a>(11) 99999-0000</a></p>
+        <p>Horário: Seg a Sex – 9h às 18h</p>
+      </div>
+
+      <!-- Coluna 4 - Assessoria de Imprensa -->
+      <div class="rodape-col">
+        <h3>Assessoria de Imprensa</h3>
+        <p>Email: <a>imprensa@fretou.com.br</a></p>
+        <p>Tel: <a>(11) 98888-0000</a></p>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-copy">
+      © 2025 Fretou – Todos os direitos reservados.
+    </div>
+  </footer>
+
+<button id="btn-topo" aria-label="Voltar ao topo">↑</button>
+
+<script src="scripts.js"></script>
+  
+</body>
+</html>

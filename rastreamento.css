@@ -1,0 +1,204 @@
+/* ==========================
+   CORES E BASE
+========================== */
+
+:root {
+  --orange: #ff9800;
+  --orange-light: #ffb300;
+  --blue-dark: #475c71;
+  --white: #fff;
+  --gray-light: #f5f5f5;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--white);
+  color: #222;
+  overflow: hidden;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header-rastreio {
+  width: 100%;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  background: var(--blue-dark);
+  color: #fff;
+  border-bottom: 2px solid #3b4d60;
+}
+
+.rast-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rast-logo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+}
+
+.rast-logo span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ==========================
+   DASHBOARD RASTREAMENTO
+========================== */
+
+.rastreamento-dashboard {
+  display: flex;
+  height: calc(100vh - 62px);
+}
+
+/* Painel lateral */
+.painel-carga {
+  width: 32%;
+  background: var(--gray-light);
+  border-right: 4px solid var(--blue-dark);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+}
+
+.painel-carga h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  border-left: 6px solid var(--orange-light);
+  padding-left: 10px;
+}
+
+.painel-carga .subtitulo {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.campo-codigo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-codigo label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+}
+
+.campo-codigo input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.4px solid #aaa;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.campo-codigo input:focus {
+  border-color: var(--orange-light);
+  box-shadow: 0 0 0 2px rgba(255, 179, 0, 0.35);
+}
+
+/* Botão */
+.btn-rastrear {
+  padding: 13px 16px;
+  background: var(--orange-light);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.btn-rastrear:hover {
+  background: #ffca3a;
+  color: #000;
+}
+
+/* Info da carga */
+.info-box {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  padding: 16px 14px 12px;
+  font-size: 0.95rem;
+  text-align: left;
+  line-height: 1.6;
+  min-height: 150px;
+  border-left: 5px solid var(--orange-light);
+}
+
+.info-box strong {
+  color: var(--blue-dark);
+}
+
+.status.em-transito {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1b5e20;
+  background: #dcffd9;
+  border: 1px solid #a4e8a0;
+}
+
+/* ==========================
+   MAPA
+========================== */
+
+.area-mapa {
+  width: 68%;
+  height: 100%;
+  background: #e8ecf5;
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media (max-width: 900px) {
+  body { overflow: auto; }
+
+  .rastreamento-dashboard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .painel-carga {
+    width: 100%;
+    border-right: none;
+    border-bottom: 4px solid var(--blue-dark);
+    height: auto;
+  }
+
+  .area-mapa {
+    width: 100%;
+    height: 420px;
+  }
+}
